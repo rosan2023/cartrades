@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Inventory - AK MOTORS</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container row-between">
+      <h1><span data-dealer-name>AK MOTORS</span> Admin Inventory</h1>
+      <div class="admin-links">
+        <a class="btn small" href="admin-inventory.html">Inventory</a>
+        <a class="btn small" href="admin-messages.html">Messages</a>
+        <a class="btn small" href="admin-contact.html">Contact</a>
+        <a class="btn secondary small" href="index.html">Site</a>
+        <button id="logoutBtn" class="btn danger small" type="button">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container admin-layout">
+    <section class="admin-panel">
+      <h3>Inventory CRUD</h3>
+      <form id="carForm">
+        <input type="hidden" id="carId" />
+        <input type="text" id="brand" placeholder="Brand" required />
+        <input type="text" id="model" placeholder="Model" required />
+        <input type="number" id="year" placeholder="Year" required />
+        <input type="number" id="price" placeholder="Price" required />
+        <input type="text" id="imageUrl" placeholder="Image URL" required />
+        <textarea id="imageUrls" placeholder="More image URLs (one per line)"></textarea>
+        <input type="text" id="engine" placeholder="Engine (e.g. 2.0L Turbo)" required />
+        <input type="text" id="transmission" placeholder="Transmission (Automatic/Manual)" required />
+        <input type="text" id="fuelType" placeholder="Fuel Type" required />
+        <input type="number" id="mileage" placeholder="Mileage (km)" required />
+        <input type="text" id="color" placeholder="Color" required />
+        <input type="text" id="vin" placeholder="VIN" required />
+        <input type="number" id="horsepower" placeholder="Horsepower" required />
+        <input type="number" id="seats" placeholder="Seats" required />
+        <input type="number" id="doors" placeholder="Doors" required />
+        <input type="text" id="drivetrain" placeholder="Drivetrain (FWD/RWD/AWD)" required />
+        <textarea id="features" placeholder="Features (comma separated)" required></textarea>
+        <button class="btn" type="submit">Save Car</button>
+        <button class="btn secondary" id="cancelEditBtn" type="button">Cancel Edit</button>
+      </form>
+      <div class="table-wrap">
+        <table id="carTable">
+          <thead>
+            <tr>
+              <th>Car</th>
+              <th>Year</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="admin-panel">
+      <h3>Currency</h3>
+      <form id="currencyForm">
+        <label for="currencyCode">Select Currency</label>
+        <select id="currencyCode"></select>
+        <button class="btn" type="submit">Save Currency</button>
+      </form>
+    </section>
+
+    <section class="admin-panel">
+      <h3>Monthly Sales Report</h3>
+      <div class="report-controls">
+        <div>
+          <label for="reportDateFrom">Date From</label>
+          <input type="date" id="reportDateFrom" />
+        </div>
+        <div>
+          <label for="reportDateTo">Date To</label>
+          <input type="date" id="reportDateTo" />
+        </div>
+      </div>
+      <div class="report-actions">
+        <button class="btn small" id="applyReportFilterBtn" type="button">Apply Filter</button>
+        <button class="btn secondary small" id="resetReportFilterBtn" type="button">Reset</button>
+        <button class="btn small" id="printReportBtn" type="button">Print Report</button>
+      </div>
+      <div id="monthlySummary"></div>
+      <div class="table-wrap">
+        <table id="salesTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Car</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/admin.js"></script>
+</body>
+</html>

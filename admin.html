@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login - AK MOTORS</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container row-between">
+      <h1><span data-dealer-name>AK MOTORS</span> Admin Login</h1>
+      <a class="btn small" href="index.html">Back to site</a>
+    </div>
+  </header>
+
+  <main class="container admin-layout">
+    <section id="loginSection" class="admin-panel">
+      <h2>Admin Login</h2>
+      <form id="loginForm">
+        <input type="text" id="adminUser" placeholder="Username" required />
+        <input type="password" id="adminPass" placeholder="Password" required />
+        <button class="btn" type="submit">Login</button>
+      </form>
+      <p class="status" id="loginStatus"></p>
+      <!--<p class="muted">Default: admin / admin123</p>-->
+    </section>
+
+    <section id="adminSection" class="hidden admin-panel">
+      <h2>Admin Pages</h2>
+      <div class="admin-links">
+        <a class="btn small" href="admin-inventory.html">Inventory Page</a>
+        <a class="btn small" href="admin-messages.html">Messages Page</a>
+        <a class="btn small" href="admin-contact.html">Company Contact Page</a>
+      </div>
+      <button id="logoutBtn" class="btn danger small">Logout</button>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/admin.js"></script>
+</body>
+</html>

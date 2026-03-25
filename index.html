@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AK MOTORS</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container row-between">
+      <h1><a id="dealerName" href="admin.html">AK MOTORS</a></h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Find Your Next Car</h2>
+      <p>Browse quality vehicles and contact us for the best deal.</p>
+    </section>
+
+    <section class="controls">
+      <label for="searchInput">Search Inventory</label>
+      <input id="searchInput" type="text" placeholder="Model, brand, year..." />
+    </section>
+
+    <section>
+      <h3>Available Inventory</h3>
+      <div id="inventoryGrid" class="inventory-grid"></div>
+      <p id="inventoryEmpty" class="empty hidden">No cars found.</p>
+    </section>
+
+    <section class="contact-card">
+      <h3>Contact Dealer</h3>
+      <div id="dealerContactInfo"></div>
+      <form id="messageForm">
+        <input type="text" id="senderName" placeholder="Your name" required />
+        <input type="email" id="senderEmail" placeholder="Your email" required />
+        <input type="tel" id="senderPhone" placeholder="Your contact number" required />
+        <textarea id="senderMessage" placeholder="Your message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+      <p id="messageStatus" class="status"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p id="footerDealerText"></p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

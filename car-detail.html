@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Details - AK MOTORS</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container row-between">
+      <h1 id="dealerName">AK MOTORS</h1>
+      <a class="btn small" href="index.html">Back to Inventory</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Car Details</h2>
+      <p>Review this vehicle and send us your interest message.</p>
+    </section>
+
+    <section id="carDetailCard" class="contact-card"></section>
+
+    <section class="contact-card">
+      <h3>Message About This Car</h3>
+      <form id="messageForm">
+        <input type="text" id="senderName" placeholder="Your name" required />
+        <input type="email" id="senderEmail" placeholder="Your email" required />
+        <input type="tel" id="senderPhone" placeholder="Your contact number" required />
+        <textarea id="senderMessage" placeholder="Your message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+      <p id="messageStatus" class="status"></p>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

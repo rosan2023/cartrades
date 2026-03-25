@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Contact - AK MOTORS</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container row-between">
+      <h1><span data-dealer-name>AK MOTORS</span> Company Contact</h1>
+      <div class="admin-links">
+        <a class="btn small" href="admin-inventory.html">Inventory</a>
+        <a class="btn small" href="admin-messages.html">Messages</a>
+        <a class="btn small" href="admin-contact.html">Contact</a>
+        <a class="btn secondary small" href="index.html">Site</a>
+        <button id="logoutBtn" class="btn danger small" type="button">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container admin-layout">
+    <section class="admin-panel">
+      <h3>Company Contact Information</h3>
+      <form id="dealerForm">
+        <input type="text" id="dealerTitle" placeholder="Dealer name" required />
+        <input type="text" id="dealerPhone" placeholder="Phone" required />
+        <input type="email" id="dealerEmail" placeholder="Email" required />
+        <input type="text" id="dealerAddress" placeholder="Address" required />
+        <button class="btn" type="submit">Update Contact</button>
+      </form>
+    </section>
+
+    <section class="admin-panel">
+      <h3>Change Admin Password</h3>
+      <form id="passwordForm">
+        <input type="password" id="currentPassword" placeholder="Current password" required />
+        <input type="password" id="newPassword" placeholder="New password (min 8 chars)" required />
+        <input type="password" id="confirmPassword" placeholder="Confirm new password" required />
+        <button class="btn" type="submit">Update Password</button>
+      </form>
+      <p id="passwordStatus" class="status"></p>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/admin.js"></script>
+</body>
+</html>
